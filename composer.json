@@ -1,0 +1,41 @@
+{
+  "name":"cuprum/api",
+  "type":"project",
+  "description":"Cuprum api base",
+  "homepage":"https://getcockpit.com/",
+  "license":"MIT",
+  "authors":[
+    {
+      "name":"Denis Zyablov",
+      "email":"do.ziablov@severmed.com"
+    }
+  ],
+  "autoload":{
+    "psr-4":{
+      "Api\\": "src/",
+      "Doctrine\\ODM\\MongoDB\\Mapping\\": "vendor-custom/doctrine/mongodb-odm/lib/Doctrine/ODM/MongoDB/Mapping"
+    }
+  },
+
+  "require":{
+    "php":"^8.1",
+    "ext-json":"*",
+    "ext-mbstring":"*",
+    "firebase/php-jwt":"^5.2",
+    "mongodb/mongodb":"^1.12",
+    "laravel/helpers":"^1.5",
+    "slim/slim": "4.*",
+    "slim/psr7": "^1.5",
+    "php-di/php-di": "^6.4",
+    "nyholm/psr7": "^1.5",
+    "doctrine/persistence": "^2.5",
+    "doctrine/mongodb-odm": "^2.4",
+    "doctrine/doctrine-bundle": "^2.6",
+    "doctrine/annotations": "^1.13",
+    "manticoresoftware/manticoresearch-php": "^2.1"
+  },
+  "config":{
+    "optimize-autoloader":true,
+    "platform-check":false
+  }
+}

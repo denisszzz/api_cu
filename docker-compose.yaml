@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+
+  backend:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - upload:/var/www/html/storage/uploads
+      - data:/var/www/html/storage/data
+
+volumes:
+  upload:
+    name: "cuprum_upload"
+  data:
+    name: "cuprum_data"
+
+networks:
+  default:
+    name: "cuprum_web"
