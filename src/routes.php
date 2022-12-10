@@ -32,9 +32,6 @@ return function (App $app) {
     $app->get('/dashboard/likes', [LikeController::class, 'getAll'])->setName('like');
     $app->get('/dashboard/likes/must', [LikeController::class, 'getMust'])->setName('like');
 
-    $app->get('/dashboard/search', [SearchQueryDashboard::class, 'getAll'])->setName('SearchQueryDashboard');
-    $app->get('/dashboard/search/must', [SearchQueryDashboard::class, 'getMust'])->setName('SearchQueryDashboard');
-
     $app->add(function ($request, $handler) {
         $response = $handler->handle($request);
         return $response
